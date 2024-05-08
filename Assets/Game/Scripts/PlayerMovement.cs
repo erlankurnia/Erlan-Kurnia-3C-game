@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
                 case CameraState.ThirdPerson:
                     if (axisDirection.magnitude >= 0.1)
                     {
-                        float rotationAngle = Mathf.Atan2(axisDirection.x, axisDirection.y) * Mathf.Rad2Deg + _cameraTransform.eulerAngles.y;
+                        float rotationAngle = Mathf.Atan2(axisDirection.x, axisDirection.y) * Mathf.Rad2Deg;// + _cameraTransform.eulerAngles.y;
 
                         float smoothAngle = Mathf.SmoothDampAngle(transform.eulerAngles.y, rotationAngle, ref  _rotationSmoothVelocity, _rotationSmoothTime);
 
