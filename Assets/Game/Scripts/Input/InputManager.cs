@@ -76,7 +76,7 @@ public class InputManager : MonoBehaviour
 
     private void CheckChangePOVInput()
     {
-        bool isPressChangePOVInput = Input.GetKey(KeyCode.Q);
+        bool isPressChangePOVInput = Input.GetKeyDown(KeyCode.Q);
 
 
         if (isPressChangePOVInput)

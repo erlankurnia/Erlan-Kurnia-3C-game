@@ -90,8 +90,8 @@ public class PlayerMovement : MonoBehaviour
                 case CameraState.FirstPerson:
                     transform.rotation = Quaternion.Euler(0, _cameraTransform.eulerAngles.y, 0);
 
-                    Vector3 verticalDirection = axisDirection.y * Vector3.forward;
-                    Vector3 horizontalDirection = axisDirection.x * Vector3.right;
+                    Vector3 verticalDirection = axisDirection.y * transform.forward;
+                    Vector3 horizontalDirection = axisDirection.x * transform.right;
                     movementDirection = verticalDirection + horizontalDirection;
 
                     _rigidbody.AddForce(movementDirection * Time.deltaTime * _speed);
